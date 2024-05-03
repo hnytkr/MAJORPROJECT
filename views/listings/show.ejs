@@ -87,10 +87,14 @@
                         <p class="starability-result card-text" data-rating="<%= review.rating %>"></p>
                         <p class="card-text"><%= review.comment %></p>
                     </div>
-                    <form class="mb-3 mt-2" method="POST" 
-                        action="/listings/<%= listing._id%>/reviews/<%= review._id%>?_method=DELETE">
-                        <button class="btn btn-sm btn-dark">DELETE</button>
-                    </form>
+                    <% if(currUser && currUser._id.equals(review.author._id)){ %>
+                        <!-- If current user is logged in and their ID matches the author's ID -->
+                        <form class="mb-3 mt-2" method="POST" action="/listings/<%= listing._id %>/reviews/<%= review._id %>?_method=DELETE">
+                            <!-- This form will submit a DELETE request to the appropriate route -->
+                            <button class="btn btn-sm btn-dark">DELETE</button>
+                        </form>
+                    <% } %>
+                    
                 </div>
             <% } %>
         </div>
