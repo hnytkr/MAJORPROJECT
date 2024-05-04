@@ -120,6 +120,8 @@ body{
 /* Show page */
 .show-img{
     height: 50vh;
+    width: 45rem !important;
+    margin-left: -6rem;
 }
 
 @media (max-width: 800px){
@@ -132,10 +134,11 @@ body{
 }
 
 @media (max-width: 500px){
-    .show-img{
-        margin-left: -5rem;
+    .show-img {
+        margin-left: -3rem;
         border-radius: 0.5rem !important;
-        width: 20rem !important;
+        width: 18rem !important;
         object-fit: cover !important;
-    } 
+        height: 18rem !important;
+    }
 }
