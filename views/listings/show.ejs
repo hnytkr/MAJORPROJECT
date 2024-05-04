@@ -10,6 +10,49 @@
             <br/>
             </div>
         </div>
+        <div id="slideshow" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <!-- Images will be dynamically added here -->
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#slideshow" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#slideshow" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        
+        <script>
+            document.querySelector('input[type="file"]').addEventListener('change', function() {
+                const files = this.files;
+                const slideshowInner = document.querySelector('.carousel-inner');
+        
+                slideshowInner.innerHTML = ''; // Clear existing images
+        
+                for (let i = 0; i < files.length; i++) {
+                    const file = files[i];
+                    const reader = new FileReader();
+        
+                    reader.onload = function(e) {
+                        const img = document.createElement('img');
+                        img.src = e.target.result;
+                        img.classList.add('d-block', 'w-100');
+                        if (i === 0) {
+                            img.classList.add('active'); // Activate first image
+                        }
+                        const slide = document.createElement('div');
+                        slide.classList.add('carousel-item');
+                        slide.appendChild(img);
+                        slideshowInner.appendChild(slide);
+                    }
+        
+                    reader.readAsDataURL(file);
+                }
+            });
+        </script>
+        
         <ul>
             <b>Listed by:-</b><i> <%= listing.owner.username %></i>
             <hr/>
