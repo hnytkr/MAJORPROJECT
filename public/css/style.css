@@ -83,7 +83,7 @@ body{
 }
 
 .card-img-top{
-    border-radius: 1rem !important;
+    border-radius: 0.5rem !important;
     width: 100% !important;
     object-fit: cover !important;
 }
@@ -108,6 +108,7 @@ body{
 .card-img-overlay:hover{
     opacity: 0.2;
     background-color: white;
+    box-shadow: 2px 2px 8px lightskyblue;
 }
 
 .add-btn{
