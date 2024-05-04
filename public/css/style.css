@@ -35,6 +35,7 @@ body{
 .nav-link:hover{
     transition: ease-in;
     color: antiquewhite;
+    text-decoration: underline;
 }
 
 /* Footer */
