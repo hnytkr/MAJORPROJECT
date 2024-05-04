@@ -122,5 +122,20 @@ body{
     height: 50vh;
 }
 
-/* Map */
+@media (max-width: 800px){
+    .card-img-top{
+        margin-left: -5rem;
+        border-radius: 0.5rem !important;
+        width: 30rem !important;
+        object-fit: cover !important;
+    } 
+}
 
+@media (max-width: 800px){
+    .card-img-top{
+        margin-left: -5rem;
+        border-radius: 0.5rem !important;
+        width: 20rem !important;
+        object-fit: cover !important;
+    } 
+}
