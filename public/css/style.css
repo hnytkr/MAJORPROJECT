@@ -83,9 +83,9 @@ body{
 }
 
 .card-img-top{
-    margin-left: -5rem;
+    
     border-radius: 0.5rem !important;
-    width: 40rem !important;
+    width: 100% !important;
     object-fit: cover !important;
 }
 
@@ -123,7 +123,7 @@ body{
 }
 
 @media (max-width: 800px){
-    .card-img-top{
+    .show-img{
         margin-left: -5rem;
         border-radius: 0.5rem !important;
         width: 30rem !important;
@@ -131,8 +131,8 @@ body{
     } 
 }
 
-@media (max-width: 800px){
-    .card-img-top{
+@media (max-width: 500px){
+    .show-img{
         margin-left: -5rem;
         border-radius: 0.5rem !important;
         width: 20rem !important;
