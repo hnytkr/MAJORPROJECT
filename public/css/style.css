@@ -83,8 +83,9 @@ body{
 }
 
 .card-img-top{
+    margin-left: -5rem;
     border-radius: 0.5rem !important;
-    width: 100% !important;
+    width: 40rem !important;
     object-fit: cover !important;
 }
 
@@ -118,7 +119,7 @@ body{
 
 /* Show page */
 .show-img{
-    height: 45vh;
+    height: 50vh;
 }
 
 /* Map */
