@@ -19,8 +19,6 @@ body{
 }
 
 
-
-
 .fa-compass{
     color: #fe424d;
     font-size: 2rem;
@@ -35,7 +33,11 @@ body{
 .nav-link:hover{
     transition: ease-in;
     color: antiquewhite;
-    text-decoration: underline;
+    text-decoration: underline !important;
+}
+
+.collapse,.navbar-collapse{
+    background-color: white !important;
 }
 
 /* Footer */
